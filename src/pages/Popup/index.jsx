@@ -6,7 +6,7 @@ import './index.css';
 import { createTheme, ThemeProvider } from '@mui/material';
 
 export const colors = {
-  orange: '#f50'
+  orange: '#ffb102'
 }
 
 const theme = createTheme({
