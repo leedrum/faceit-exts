@@ -62,7 +62,9 @@ const Popup = () => {
           orientation="vertical"
           value={value}
           onChange={handleChange}
-          aria-label="Vertical tabs example"
+          aria-label="Menu tabs"
+          textColor="secondary"
+          indicatorColor="secondary"
           sx={{ borderRight: 1, borderColor: 'divider' }}
         >
           <Tab label="Automation" {...a11yProps(0)} />
