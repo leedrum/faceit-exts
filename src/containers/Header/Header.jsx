@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
 import LogoExtComponent from '../../containers/LogoExts/LogoExts';
+import { Typography } from '@mui/material';
 
 export const HeaderComponent = () => {
   return (
@@ -9,7 +10,7 @@ export const HeaderComponent = () => {
         <LogoExtComponent/>
       </Grid>
       <Grid item xs={10}>
-        Faceit Exts
+      <Typography variant="h4" component="h1">Faceit Exts</Typography>
       </Grid>
     </Grid>
   )
