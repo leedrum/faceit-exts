@@ -1,3 +1,3 @@
 /* eslint-disable import/prefer-default-export */
 
-export const getCurrentPath = () => location.pathname
+export const getCurrentPath = () => window.location.pathname
