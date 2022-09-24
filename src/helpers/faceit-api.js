@@ -1,12 +1,36 @@
 import pMemoize from 'p-memoize'
 import camelcaseKeys from 'camelcase-keys'
-import format from 'date-fns/format'
+import * as dateFns from 'date-fns'
 import Cookies from 'js-cookie'
-import browser from 'webextension-polyfill'
-import { ACTION_FETCH_FACEIT_API } from '../../shared/constants'
 import { mapTotalStatsMemoized, mapAverageStatsMemoized } from './stats'
+import pRetry from 'p-retry'
 
 export const CACHE_TIME = 600000
+
+
+const BASE_URL = 'https://api.faceit.com'
+
+export const faceitApii = async (path, options) => {
+  const response = await pRetry(
+    () =>
+      fetch(`${BASE_URL}${path}`, options).then(res => {
+        if (res.status === 404) {
+          throw new pRetry.AbortError(res.statusText)
+        } else if (!res.ok) {
+          throw new Error(res.statusText)
+        }
+        return res
+      }),
+    {
+      retries: 3
+    }
+  )
+
+  const json = await response.json()
+
+  return json
+}
+
 
 async function fetchApi(path) {
   if (typeof path !== 'string') {
@@ -21,11 +45,7 @@ async function fetchApi(path) {
       options.headers.Authorization = `Bearer ${token}`
     }
 
-    const response = await browser.runtime.sendMessage({
-      action: ACTION_FETCH_FACEIT_API,
-      path,
-      options
-    })
+    const response = await faceitApii(path, options)
     if (!response) return null
     const {
       code, // Status for new API(?)
@@ -112,7 +132,7 @@ export const getPlayerHistory = async (userId, page = 0) => {
   const offset = 0
   const from = encodeURIComponent(`1970-01-01T01:00:00+0000`)
   const to = encodeURIComponent(
-    format(new Date(), `yyyy-MM-dd'T'HH:mm:ss'+0000'`)
+    dateFns.format(new Date(), `yyyy-MM-dd'T'HH:mm:ss'+0000'`)
   )
 
   return fetchApiMemoized(

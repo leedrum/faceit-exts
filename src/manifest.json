@@ -1,12 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Chrome Extension with React & Webpack",
-  "description": "A chrome extension boilerplate built with React 17, Webpack 5, and Webpack Dev Server 4",
-  "options_page": "options.html",
+  "name": "Faceit Exts",
+  "description": "Faceit Exts is a extension improve experience and adds some features",
   "background": { "service_worker": "background.bundle.js" },
-  "chrome_url_overrides": {
-    "newtab": "newtab.html"
-  },
+  "host_permissions": ["https://api.faceit.com/"],
   "action": {
     "default_icon": "icon48.png",
     "default_popup": "popup.html"
@@ -18,12 +15,11 @@
   },
   "content_scripts": [
     {
-      "matches": ["http://*/*", "https://*/*", "https://www.faceit.com/*"],
+      "matches": ["https://www.faceit.com/*"],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"]
     }
   ],
-  "devtools_page": "devtools.html",
   "web_accessible_resources": [
     {
       "resources": ["content.styles.css", "icon128.png", "icon48.png", "icon16.png"],

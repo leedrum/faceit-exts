@@ -18,15 +18,20 @@ export const getRoomId = path => {
 export const MATCH_TEAM_V1 = '.kCkDeE'
 export const MATCH_TEAM_V2 = '.cXtmqD'
 export const MEMBERS_ATTRIBUTE = '[members]:not([members=""])'
-// Export const MATCHROOM_OVERVIEW = '#MATCHROOM-OVERVIEW'
 
-export const matchRoomIsReady = () =>
-  document
-    .querySelector('#parasite-container')
-    .shadowRoot.querySelector('div[name="roster1"]') !== null ||
-  document
-    .querySelector('#parasite-container')
-    .shadowRoot.querySelector('div[name="roster2"]') !== null
+export const matchRoomIsReady = () => {
+  try {
+    return document
+      .querySelector('#parasite-container')
+      .shadowRoot.querySelector('div[name="roster1"]') !== null ||
+      document
+        .querySelector('#parasite-container')
+        .shadowRoot.querySelector('div[name="roster2"]') !== null
+  } catch {
+    return false
+  }
+}
+
 
 export const getTeamElements = parent => {
   parent = document.querySelector('#parasite-container').shadowRoot

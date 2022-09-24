@@ -1,4 +1,4 @@
-export const ENHANCER_ATTRIBUTE = 'faceit-enhancer'
+export const ENHANCER_ATTRIBUTE = 'faceit-exts'
 
 export const setFeatureAttribute = (featureName, element) =>
   element.setAttribute(`${ENHANCER_ATTRIBUTE}-${featureName}`, '')
