@@ -1,9 +1,10 @@
 import React from 'react';
+import RowSettingComponent from '../RowSetting/RowSetting';
 
 export const AutomationComponent = () => {
   return (
     <React.Fragment>
-      AutomationComponent
+      <RowSettingComponent name="matchQueueAutoReady"/>
     </React.Fragment>
   )
 }

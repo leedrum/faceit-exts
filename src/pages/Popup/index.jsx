@@ -20,6 +20,7 @@ const theme = createTheme({
     },
   },
   palette: {
+    mode: 'dark',
     type: 'dark',
     primary: {
       main: '#ccc'
