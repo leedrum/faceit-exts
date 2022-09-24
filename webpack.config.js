@@ -101,6 +101,25 @@ var options = {
         ],
         exclude: /node_modules/,
       },
+      {
+        test: /\.js$/,
+        include: /content/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            plugins: [
+              'transform-object-rest-spread',
+              [
+                'transform-react-jsx',
+                {
+                  pragma: 'h',
+                  useBuiltIns: true
+                }
+              ]
+            ]
+          }
+        }
+      },
     ],
   },
   resolve: {
