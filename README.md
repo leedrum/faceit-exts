@@ -59,4 +59,4 @@ Please open up an issue to nudge me to update extension.
 
 ---
 
-LeeDrum | [Website](https://arrow-silver.xyz)
+[@leedrum](https://github.com/leedrum) | [Website](https://arrow-silver.xyz)
