@@ -7,14 +7,6 @@
 Faceit Exts inspried from Faceit Enhancer. @timche\_ haven't maintained it for a long time. So have many bugs, and features that need to fix/add.
 I tried to fix it temporarily but so hard to push the extension files to everyone so I tried to code a new extension and publish it to the chrome store and Firefox Addon to make u guys be able to update the extension directly.
 
-## TechStack
-
-- Manifest V3
-- Material UI
-- React v17
-- Webpack 4.x
-- TypeScript
-
 ## Features
 
 - Show level process
@@ -30,8 +22,14 @@ Please open up an issue to nudge me to update extension.
 
 ### For normal user (in-comming)
 
-1. Chrome store
+1. [Chrome store](https://chrome.google.com/webstore/detail/faceit-exts/blncihpjdpcjlkkfcmdkbdonkcpbenpp)
+
 2. Firefox Add-on
+
+- Download [ZipFile](https://github.com/leedrum/faceit-exts/releases/download/v1.0.0/faceit-exts-firefox.zip)
+- Go `about:debugging#/runtime/this-firefox`
+- Click on `Load Temporary Add-on`
+- Choose `faceit-exts-firefox.zip`
 
 ### For developer
 
@@ -45,6 +43,14 @@ Please open up an issue to nudge me to update extension.
    3. Click on `Load unpacked extension`
    4. Select the `build` folder.
 6. Happy coding.
+
+## TechStack
+
+- Manifest V3 / V2 for Firefox
+- Material UI
+- React v17
+- Webpack 4.x
+- TypeScript
 
 ## Resources:
 
