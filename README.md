@@ -2,7 +2,9 @@
 
 # Faceit Exts
 
-<img valign="middle" src="https://img.shields.io/chrome-web-store/v/blncihpjdpcjlkkfcmdkbdonkcpbenpp?label=%20"> <img valign="middle" src="https://img.shields.io/chrome-web-store/users/blncihpjdpcjlkkfcmdkbdonkcpbenpp"> <img valign="middle" src="https://img.shields.io/chrome-web-store/rating/blncihpjdpcjlkkfcmdkbdonkcpbenpp">
+- [Chrome](https://chrome.google.com/webstore/detail/faceit-exts/blncihpjdpcjlkkfcmdkbdonkcpbenpp) <img valign="middle" src="https://img.shields.io/chrome-web-store/v/blncihpjdpcjlkkfcmdkbdonkcpbenpp?label=%20"> <img valign="middle" src="https://img.shields.io/chrome-web-store/users/blncihpjdpcjlkkfcmdkbdonkcpbenpp"> <img valign="middle" src="https://img.shields.io/chrome-web-store/rating/blncihpjdpcjlkkfcmdkbdonkcpbenpp">
+
+- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/faceit-exts/) <img valign="middle" src="https://img.shields.io/amo/v/faceit-exts?label=%20"> <img valign="middle" src="https://img.shields.io/amo/users/faceit-exts"> <img valign="middle" src="https://img.shields.io/amo/rating/faceit-exts">
 
 Faceit Exts inspried from Faceit Enhancer. @timche\_ haven't maintained it for a long time. So have many bugs, and features that need to fix/add.
 I tried to fix it temporarily but so hard to push the extension files to everyone so I tried to code a new extension and publish it to the chrome store and Firefox Addon to make u guys be able to update the extension directly.
