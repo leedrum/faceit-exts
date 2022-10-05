@@ -1,10 +1,10 @@
 import select from 'select-dom'
 
 export const ClickModalPartyInviteAccept = parent => {
-  const acceptButton = select(
-    'button[class="sc-clsHhM gYYSzb sc-fbkhIv hTGgtk"]',
+  const acceptButton = select.all(
+    'button',
     parent
-  )
+  )[2]
 
   if (acceptButton) {
     acceptButton.click()
