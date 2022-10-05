@@ -40,7 +40,7 @@ export const getFactionItem = async (team, factionName) => {
   const elos = team.roster.map(member => member.elo)
   const totalElo = elos.reduce((partialSum, a) => partialSum + a, 0)
   const averageElo = Math.round(totalElo / 5)
-  const winProbability = team.stats.winProbability
+  const winProbability = team?.stats?.winProbability
 
   return {
     factionName,
@@ -50,7 +50,6 @@ export const getFactionItem = async (team, factionName) => {
 }
 
 export const MatchRoomEloEstmation =  async parent => {
-  console.log('MatchRoomEloEstmation')
   const roomId = getRoomId()
   const match = await getMatch(roomId)
 
