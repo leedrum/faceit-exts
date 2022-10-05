@@ -13,6 +13,7 @@ I tried to fix it temporarily but so hard to push the extension files to everyon
 
 - Show level process
 - Show Elo Estimation for cometitive matchs
+- Show Elo Estimation for hub's match
 - Show Elo change in match history (stats)
 - Show Ban history
 - Auto accept invite
