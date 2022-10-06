@@ -2,6 +2,8 @@
 
 # Faceit Exts
 
+[![Build](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml/badge.svg)](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml)
+
 - [Chrome](https://chrome.google.com/webstore/detail/faceit-exts/blncihpjdpcjlkkfcmdkbdonkcpbenpp) <img valign="middle" src="https://img.shields.io/chrome-web-store/v/blncihpjdpcjlkkfcmdkbdonkcpbenpp?label=%20"> <img valign="middle" src="https://img.shields.io/chrome-web-store/users/blncihpjdpcjlkkfcmdkbdonkcpbenpp"> <img valign="middle" src="https://img.shields.io/chrome-web-store/rating/blncihpjdpcjlkkfcmdkbdonkcpbenpp">
 
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/faceit-exts/) <img valign="middle" src="https://img.shields.io/amo/v/faceit-exts?label=%20"> <img valign="middle" src="https://img.shields.io/amo/users/faceit-exts"> <img valign="middle" src="https://img.shields.io/amo/rating/faceit-exts">
