@@ -1,6 +1,7 @@
 import { Box, Divider, Grid, Switch } from '@mui/material';
 import React from 'react';
 import { styled } from '@mui/material/styles';
+import Row from '../Row/Row';
 
 const Android12Switch = styled(Switch)(({ theme }) => ({
   padding: 8,
@@ -44,19 +45,15 @@ export const RowSettingComponent = (props) => {
   }
 
   return (
-    <React.Fragment>
-      <Box sx={{ flexGrow: 1, padding: 2 }}>
-        <Grid container spacing={2}  alignItems={'center'} justifyContent={'center'}>
-          <Grid item xs={8}>
-            { name }
-          </Grid>
-          <Grid item xs={4}>
-            <Android12Switch onChange={onChangeSwitch} checked={checked}/>
-          </Grid>
-        </Grid>
-      </Box>
+    <Row>
+      <Grid item xs={8}>
+        { name }
+      </Grid>
+      <Grid item xs={4}>
+        <Android12Switch onChange={onChangeSwitch} checked={checked}/>
+      </Grid>
       <Divider/>
-    </React.Fragment>
+    </Row>
   )
 }
 
