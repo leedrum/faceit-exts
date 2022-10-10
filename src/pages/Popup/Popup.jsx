@@ -8,7 +8,7 @@ import HeaderComponent from '../../containers/Header/Header';
 import GithubComponent from '../../containers/Github/Github';
 import AboutComponent from '../../containers/About/About';
 import AutomationComponent from '../../containers/Automation/Automation';
-import NotificationComponent from '../../containers/Notification/Notification';
+// import NotificationComponent from '../../containers/Notification/Notification';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,6 +54,7 @@ const Popup = () => {
       <HeaderComponent/>
       <Box
         sx={{ flexGrow: 1, display: 'flex' }}
+        style={{ marginTop: '10px' }}
       >
         <Tabs
           orientation="vertical"
@@ -63,17 +64,18 @@ const Popup = () => {
           textColor="secondary"
           indicatorColor="secondary"
           sx={{ borderRight: 1, borderColor: 'divider' }}
+          style={{width: '160px'}}
         >
           <Tab label="Automation" {...a11yProps(0)} />
-          <Tab label="Notification" {...a11yProps(1)} />
+          {/* <Tab label="Notification" {...a11yProps(1)} /> */}
           <Tab label="About" {...a11yProps(2)} />
-          <Tab label="Github" {...a11yProps(2)} />
+          <Tab label="Github" {...a11yProps(3)} />
         </Tabs>
         <TabPanel value={value} index={0}>
           <AutomationComponent/>
         </TabPanel>
         <TabPanel value={value} index={1}>
-          <NotificationComponent/>
+          {/* <NotificationComponent/> */}
         </TabPanel>
         <TabPanel value={value} index={2}>
           <AboutComponent/>
