@@ -4,7 +4,8 @@
   "version": "1.1.0",
   "manifest_version": 2,
   "permissions": [
-    "https://api.faceit.com/"
+    "https://api.faceit.com/",
+    "storage"
   ],
   "icons": {
     "16": "icon16.png",
