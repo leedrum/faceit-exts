@@ -1,4 +1,4 @@
-import { Box, Divider, Grid, Switch } from '@mui/material';
+import { Divider, Grid, Switch } from '@mui/material';
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import Row from '../Row/Row';
