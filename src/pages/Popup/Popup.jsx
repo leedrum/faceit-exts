@@ -68,19 +68,19 @@ const Popup = () => {
         >
           <Tab label="Automation" {...a11yProps(0)} />
           {/* <Tab label="Notification" {...a11yProps(1)} /> */}
-          <Tab label="About" {...a11yProps(2)} />
-          <Tab label="Github" {...a11yProps(3)} />
+          <Tab label="About" {...a11yProps(1)} />
+          <Tab label="Github" {...a11yProps(2)} />
         </Tabs>
         <TabPanel value={value} index={0}>
           <AutomationComponent/>
         </TabPanel>
-        <TabPanel value={value} index={1}>
+        {/* <TabPanel value={value} index={1}> */}
           {/* <NotificationComponent/> */}
-        </TabPanel>
-        <TabPanel value={value} index={2}>
+        {/* </TabPanel> */}
+        <TabPanel value={value} index={1}>
           <AboutComponent/>
         </TabPanel>
-        <TabPanel value={value} index={3}>
+        <TabPanel value={value} index={2}>
           <GithubComponent/>
         </TabPanel>
       </Box>

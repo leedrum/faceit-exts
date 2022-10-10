@@ -2,10 +2,13 @@ import { Divider, Grid, Switch } from '@mui/material';
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import Row from '../Row/Row';
+import { useEffect } from 'react';
+import { isEnabledSetting, toggleSetting } from '../../helpers/settings';
 
 const Android12Switch = styled(Switch)(({ theme }) => ({
   padding: 8,
   '& .MuiSwitch-track': {
+    backgroundColor: `${theme.palette.secondary.main} !important`,
     borderRadius: 22 / 2,
     '&:before, &:after': {
       content: '""',
@@ -37,11 +40,17 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
 }));
 
 export const RowSettingComponent = (props) => {
-  const { name, checked } = props
+  const { name, keySetting } = props
+  const [checked, setChecked] = React.useState(false)
+
+  useEffect(() => {
+    setChecked(isEnabledSetting(keySetting))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const onChangeSwitch = (e) => {
-    const status = e.target.value
-    console.log('status', status)
+    toggleSetting(keySetting, e.target.value)
+    setChecked(isEnabledSetting(keySetting))
   }
 
   return (
