@@ -11,8 +11,7 @@ export const HeaderComponent = () => {
           <LogoExtComponent/>
         </Grid>
         <Grid item xs={10}>
-        <Typography variant="h5" component="h1">Faceit Exts</Typography>
-        <Typography>Give me a star if you're happy => <a style={{color: 'white'}} href="https://github.com/leedrum/faceit-exts">Star</a></Typography>
+          <Typography variant="h5" component="h1">Faceit Exts</Typography>
         </Grid>
       </Grid>
     </Box>
