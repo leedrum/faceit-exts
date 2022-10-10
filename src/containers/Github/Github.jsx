@@ -1,4 +1,4 @@
-import { Box, Divider, Grid } from '@mui/material';
+import { Divider, Grid } from '@mui/material';
 import React from 'react'
 import Row from '../Row/Row';
 import './style.scss'
