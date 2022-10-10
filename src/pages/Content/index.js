@@ -14,6 +14,7 @@ import { MatchRoomEloEstmation } from './modules/match-room-elo-estimation'
 import PlayerProfileBan from './modules/player-profile-ban'
 import PlayerProfileMatchesElo from './modules/player-profile-matches-elo'
 import PlayerProfileMatchesDemo from './modules/add-player-profile-matches-demo'
+import { runIfEnableSetting } from '../../helpers/settings'
 // import PlayerProfileExtendedStats from './modules/player-profile-extended-stats'
 
 const debouncedPlayerProfileStatsFeatures = debounce(async parentElement => {
@@ -44,20 +45,48 @@ function observeBody() {
 
     if (modalElement) {
       if (modals.isMatchQueuing(modalElement)) {
-        ClickModalMatchQueuingContinue(modalElement)
+        runIfEnableSetting(
+          'matchQueueAutoReady',
+          ClickModalMatchQueuingContinue,
+          modalElement
+        )
       } else if (modals.isMatchReady(modalElement)) {
-        ClickModalMatchReady(modalElement)
+        runIfEnableSetting(
+          'matchQueueAutoReady',
+          ClickModalMatchReady,
+          modalElement
+        )
       } else if (modals.isMatchRoomCaptain(modalElement)) {
-        ClickModalMatchRoomCaptainOk(modalElement)
-        console.log('isMatchRoomCaptain')
+        runIfEnableSetting(
+          'matchRoomCaptainOK',
+          ClickModalMatchRoomCaptainOk,
+          modalElement
+        )
       } else if (modals.isMatchVictory(modalElement)) {
-        ClickModalClose(modalElement)
+        runIfEnableSetting(
+          'modalCloseMatchVictory',
+          ClickModalClose,
+          modalElement
+        )
       } else if (modals.isMatchDefeat(modalElement)) {
-        ClickModalClose(modalElement)
+        runIfEnableSetting(
+          'modalCloseMatchDefeat',
+          ClickModalClose,
+          modalElement
+        )
       } else if (modals.isGlobalRankingUpdate(modalElement)) {
+        runIfEnableSetting(
+          'modalCloseGlobalRankingUpdate',
+          ClickModalClose,
+          modalElement
+        )
         ClickModalClose(modalElement)
       } else if (modals.isInactive(modalElement)) {
-        ClickModalInactiveCheck(modalElement)
+        runIfEnableSetting(
+          'modalClickInactiveCheck',
+          ClickModalInactiveCheck,
+          modalElement
+        )
       } else if (modals.isPlayerProfile()) {
         // addPlayerProfileBadge(modalElement)
         // addPlayerProfileLinks(modalElement)
