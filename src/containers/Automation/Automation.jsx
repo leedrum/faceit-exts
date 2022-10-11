@@ -5,6 +5,7 @@ export const AutomationComponent = () => {
   return (
     <React.Fragment>
       <RowSettingComponent name="Match Queue Auto Ready" keySetting="matchQueueAutoReady"/>
+      <RowSettingComponent name="Match Accept Invite" keySetting="partyAutoAcceptInvite"/>
       <RowSettingComponent name="Close match vicotry" keySetting="modalCloseMatchVictory"/>
       <RowSettingComponent name="Close match defeat" keySetting="modalCloseMatchDefeat"/>
       <RowSettingComponent name="Close global ranking update" keySetting="modalCloseGlobalRankingUpdate"/>

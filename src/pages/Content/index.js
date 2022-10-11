@@ -35,7 +35,11 @@ function observeBody() {
       reactModals.forEach(modal => {
         if (modal.querySelector('h5')) {
           if (modals.isInviteToParty(modal)) {
-            ClickModalPartyInviteAccept(modal)
+            runIfEnableSetting(
+              'partyAutoAcceptInvite',
+              ClickModalPartyInviteAccept,
+              modal
+            )
           }
         }
       })

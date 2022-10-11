@@ -2959,6 +2959,11 @@
   dependencies:
     "utila" "~0.4"
 
+"dom-form-serializer@^2.0.0":
+  "integrity" "sha512-HMrrc7gJIBj6sWmnJcO9DLZj8AsdFP60+pZSu0vMJxZhEP3GPfsNE9X1GC95nXZ0SZbS8FYDb/NHW/NArSmu0Q=="
+  "resolved" "https://registry.npmjs.org/dom-form-serializer/-/dom-form-serializer-2.0.0.tgz"
+  "version" "2.0.0"
+
 "dom-helpers@^5.0.1":
   "integrity" "sha512-nRCa7CK3VTrM2NmGkIy4cbK7IZlgBE/PYMn55rrXefr5xXDP0LdtfPnblFDoVdcAfslJ7or6iqAUnx0CCGIWQA=="
   "resolved" "https://registry.npmjs.org/dom-helpers/-/dom-helpers-5.2.1.tgz"
@@ -4677,6 +4682,11 @@
   "version" "6.0.0"
   dependencies:
     "yallist" "^4.0.0"
+
+"lz-string@^1.4.4":
+  "integrity" "sha512-0ckx7ZHRPqb0oUm8zNr+90mtf9DQB60H1wMCjBtfi62Kl3a7JbHob6gA2bC+xRvZoOL+1hzUK8jeuEIQE8svEQ=="
+  "resolved" "https://registry.npmjs.org/lz-string/-/lz-string-1.4.4.tgz"
+  "version" "1.4.4"
 
 "make-dir@^3.0.2", "make-dir@^3.1.0":
   "integrity" "sha512-g3FeP20LNwhALb/6Cz6Dd4F2ngze0jz7tbzrD2wAV+o9FeNHe4rL+yK2md0J/fiSf1sa1ADhXqi5+oVwOM/eGw=="
@@ -6523,6 +6533,11 @@
   "resolved" "https://registry.npmjs.org/text-table/-/text-table-0.2.0.tgz"
   "version" "0.2.0"
 
+"throttle-debounce@^5.0.0":
+  "integrity" "sha512-2iQTSgkkc1Zyk0MeVrt/3BvuOXYPl/R8Z0U2xxo9rjwNciaHDG3R+Lm6dh4EeUci49DanvBnuqI6jshoQQRGEg=="
+  "resolved" "https://registry.npmjs.org/throttle-debounce/-/throttle-debounce-5.0.0.tgz"
+  "version" "5.0.0"
+
 "thunky@^1.0.2":
   "integrity" "sha512-eHY7nBftgThBqOyHGVN+l8gF0BucP09fMo0oO/Lb0w1OF80dJv+lDVpXG60WMQvkcxAkNybKsrEIE3ZtKGmPrA=="
   "resolved" "https://registry.npmjs.org/thunky/-/thunky-1.1.0.tgz"
@@ -6789,6 +6804,27 @@
   "version" "1.7.3"
   dependencies:
     "minimalistic-assert" "^1.0.0"
+
+"webext-detect-page@^4.0.1":
+  "integrity" "sha512-Y9Skw6/Uj0dGwOIidc1XqZ3neEbmuuT4BlkL/J4JHAo6fVznHIZq6/MWDsPGOA/jnNowiSXtHHh4S/TOxbl6bQ=="
+  "resolved" "https://registry.npmjs.org/webext-detect-page/-/webext-detect-page-4.0.1.tgz"
+  "version" "4.0.1"
+
+"webext-options-sync@^4.0.0":
+  "integrity" "sha512-00umVaF/jpd3cWyT/9OZJf1CM5Z3AtiIKT/4Fzuhwfe3pg2z84cGz/RwaIRiN60zz7A64ieEG1z9dKT8/cEICQ=="
+  "resolved" "https://registry.npmjs.org/webext-options-sync/-/webext-options-sync-4.0.0.tgz"
+  "version" "4.0.0"
+  dependencies:
+    "dom-form-serializer" "^2.0.0"
+    "lz-string" "^1.4.4"
+    "throttle-debounce" "^5.0.0"
+    "webext-detect-page" "^4.0.1"
+    "webext-polyfill-kinda" "^0.10.0"
+
+"webext-polyfill-kinda@^0.10.0":
+  "integrity" "sha512-Yz5WTwig5byFfMXgagtfaJkVU+RrnVqtL1hmvA+GIbpRaGKU1DIrFYHMUUFkeyFqxRSuhbOdLKzteXxCd6VNzA=="
+  "resolved" "https://registry.npmjs.org/webext-polyfill-kinda/-/webext-polyfill-kinda-0.10.0.tgz"
+  "version" "0.10.0"
 
 "webextension-polyfill@^0.10.0":
   "integrity" "sha512-c5s35LgVa5tFaHhrZDnr3FpQpjj1BB+RXhLTYUxGqBVN460HkbM8TBtEqdXWbpTKfzwCcjAZVF7zXCYSKtcp9g=="

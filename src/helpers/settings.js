@@ -1,19 +1,29 @@
-export const isEnabledSetting = key => {
-  return window.localStorage.getItem(key) === "on"
+import OptionsSync from 'webext-options-sync'
+
+export const optionsStorage = new OptionsSync()
+
+export const isEnabledSetting = async key => {
+  const options = await optionsStorage.getAll()
+  return options[key] === "on"
 }
 
-export const toggleSetting = key => {
-  if (window.localStorage.getItem(key) === "on") {
-    window.localStorage.setItem(key, 'off')
+export const toggleSetting = async key => {
+  const options = await optionsStorage.getAll()
+
+  const value = options[key]
+  if (value === "on") {
+    options[`${key}`] = "off"
+    await optionsStorage.set(options)
   } else {
-    window.localStorage.setItem(key, 'on')
+    options[`${key}`] = "on"
+    await optionsStorage.set(options)
   }
 }
 
 export const runIfEnableSetting = async (option, feature, parent) => {
   const featureEnabled = await isEnabledSetting(option)
 
-  if (featureEnabled) {
+  if (featureEnabled === true) {
     return feature(parent)
   }
 }
@@ -21,6 +31,7 @@ export const runIfEnableSetting = async (option, feature, parent) => {
 export const InitSetting = () => {
   return {
     matchQueueAutoReady: false,
+    partyAutoAcceptInvite: false,
     matchRoomAutoVetoLocations: false,
     matchRoomAutoVetoMaps: false,
     modalCloseMatchVictory: false,
