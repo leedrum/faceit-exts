@@ -8,8 +8,8 @@
 
 - [Firefox](https://addons.mozilla.org/en-US/firefox/addon/faceit-exts/) <img valign="middle" src="https://img.shields.io/amo/v/faceit-exts?label=%20"> <img valign="middle" src="https://img.shields.io/amo/users/faceit-exts"> <img valign="middle" src="https://img.shields.io/amo/rating/faceit-exts">
 
-Faceit Exts inspried from Faceit Enhancer. @timche\_ haven't maintained it for a long time. So have many bugs, and features that need to fix/add.
-I tried to fix it temporarily but so hard to push the extension files to everyone so I tried to code a new extension and publish it to the chrome store and Firefox Addon to make u guys be able to update the extension directly.
+Faceit Exts inspried from Faceit Enhancer. [@timche\_](https://github.com/timche) haven't maintained it for a long time. So have many bugs, and features that need to fix/add.
+I tried to fix it temporarily but so hard to push the extension files to everyone so I tried to code a new extension and publish it to the chrome store and Firefox Addon to make you guys be able to update the extension directly.
 
 ## Features
 
@@ -25,13 +25,23 @@ Please open up an issue to nudge me to update extension.
 
 ## Installing and Running
 
-### For normal user (in-comming)
+### For normal user
 
 1. [Chrome store](https://chrome.google.com/webstore/detail/faceit-exts/blncihpjdpcjlkkfcmdkbdonkcpbenpp)
 
-2. Firefox Add-on
+- Use Extension from store using the link above or follow the steps below manually
+- Download `faceit-exts-firefox.zip` from [releases](https://github.com/leedrum/faceit-exts/releases)
+- Unzip file the `ZipFile`
+- Go `chrome://extensions/`
+- Enable `Developer mode` on the right side
+- Click on `Load unpacked`
+- Choose folder unziped
 
-- Download [ZipFile](https://github.com/leedrum/faceit-exts/releases/download/v1.0.0/faceit-exts-firefox.zip)
+2. [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/faceit-exts/)
+
+- Use Extension from add-on store using the link above or follow the steps below manually
+- Download `faceit-exts-firefox.zip` from [releases](https://github.com/leedrum/faceit-exts/releases)
+- Unzip file the `ZipFile`
 - Go `about:debugging#/runtime/this-firefox`
 - Click on `Load Temporary Add-on`
 - Choose `faceit-exts-firefox.zip`
@@ -64,4 +74,4 @@ Please open up an issue to nudge me to update extension.
 
 ---
 
-[@leedrum](https://github.com/leedrum) | [Website](https://arrow-silver.xyz)
+Author: [@leedrum](https://github.com/leedrum) | [Website](https://arrow-silver.xyz)
