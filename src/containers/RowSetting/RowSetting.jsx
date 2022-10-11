@@ -42,15 +42,15 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
 export const RowSettingComponent = (props) => {
   const { name, keySetting } = props
   const [checked, setChecked] = React.useState(false)
-
-  useEffect(() => {
-    setChecked(isEnabledSetting(keySetting))
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async () => {
+    setChecked(await isEnabledSetting(keySetting))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const onChangeSwitch = (e) => {
-    toggleSetting(keySetting, e.target.value)
-    setChecked(isEnabledSetting(keySetting))
+  const onChangeSwitch = async (e) => {
+    await toggleSetting(keySetting, e.target.value)
+    setChecked(await isEnabledSetting(keySetting))
   }
 
   return (

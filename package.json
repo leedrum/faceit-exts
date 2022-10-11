@@ -30,6 +30,7 @@
     "react-hot-loader": "^4.13.0",
     "select-dom": "^7.1.1",
     "semver-diff": "^4.0.0",
+    "webext-options-sync": "^4.0.0",
     "webextension-polyfill": "^0.10.0"
   },
   "devDependencies": {
