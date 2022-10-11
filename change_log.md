@@ -1,5 +1,10 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.1](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.1)
+
+- Add option Auto Accept Invite Party
+- Fix options can not use
+
 [v.1.1.0](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.0)
 
 - Optimize UI
