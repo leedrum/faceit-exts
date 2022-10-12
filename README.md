@@ -2,7 +2,7 @@
 
 # Faceit Exts
 
-[![Build](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml/badge.svg)](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml)
+[![Build](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml/badge.svg)](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml) [![CS:GO](https://img.shields.io/badge/game-CS%3AGO-yellow.svg)](https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/) [![Javascript](https://img.shields.io/badge/language-Javascript-%23f34b7d.svg)]()
 
 - [Chrome](https://chrome.google.com/webstore/detail/faceit-exts/blncihpjdpcjlkkfcmdkbdonkcpbenpp) <img valign="middle" src="https://img.shields.io/chrome-web-store/v/blncihpjdpcjlkkfcmdkbdonkcpbenpp?label=%20"> <img valign="middle" src="https://img.shields.io/chrome-web-store/users/blncihpjdpcjlkkfcmdkbdonkcpbenpp"> <img valign="middle" src="https://img.shields.io/chrome-web-store/rating/blncihpjdpcjlkkfcmdkbdonkcpbenpp">
 
@@ -27,10 +27,16 @@ Please open up an issue to nudge me to update extension.
 
 ### For normal user
 
+- Use the link below to install
+- [Chrome store](https://chrome.google.com/webstore/detail/faceit-exts/blncihpjdpcjlkkfcmdkbdonkcpbenpp)
+- [Firefox Add-on](https://addons.mozilla.org/en-US/firefox/addon/faceit-exts/)
+
+### For normal user but manually
+
 1. [Chrome store](https://chrome.google.com/webstore/detail/faceit-exts/blncihpjdpcjlkkfcmdkbdonkcpbenpp)
 
 - Use Extension from store using the link above or follow the steps below manually
-- Download `faceit-exts-firefox.zip` from [releases](https://github.com/leedrum/faceit-exts/releases)
+- Download `faceit-exts.zip` from [releases](https://github.com/leedrum/faceit-exts/releases)
 - Unzip file the `ZipFile`
 - Go `chrome://extensions/`
 - Enable `Developer mode` on the right side
