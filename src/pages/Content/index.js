@@ -15,13 +15,13 @@ import PlayerProfileBan from './modules/player-profile-ban'
 import PlayerProfileMatchesElo from './modules/player-profile-matches-elo'
 import PlayerProfileMatchesDemo from './modules/add-player-profile-matches-demo'
 import { runIfEnableSetting } from '../../helpers/settings'
-// import PlayerProfileExtendedStats from './modules/player-profile-extended-stats'
+import PlayerProfileExtendedStats from './modules/player-profile-extended-stats'
 
 const debouncedPlayerProfileStatsFeatures = debounce(async parentElement => {
   // addPlayerProfileLevelProgress(parentElement)
   await PlayerProfileMatchesDemo(parentElement)
   await PlayerProfileMatchesElo(parentElement)
-  // await PlayerProfileExtendedStats(parentElement)
+  await PlayerProfileExtendedStats(parentElement)
 }, 200)
 
 function observeBody() {
