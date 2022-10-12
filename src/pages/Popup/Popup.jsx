@@ -8,6 +8,7 @@ import HeaderComponent from '../../containers/Header/Header';
 import GithubComponent from '../../containers/Github/Github';
 import AboutComponent from '../../containers/About/About';
 import AutomationComponent from '../../containers/Automation/Automation';
+import Veto from '../../containers/Veto/Veto';
 // import NotificationComponent from '../../containers/Notification/Notification';
 
 function TabPanel(props) {
@@ -67,20 +68,23 @@ const Popup = () => {
           style={{width: '160px'}}
         >
           <Tab label="Automation" {...a11yProps(0)} />
-          {/* <Tab label="Notification" {...a11yProps(1)} /> */}
-          <Tab label="About" {...a11yProps(1)} />
-          <Tab label="Github" {...a11yProps(2)} />
+          <Tab label="Veto" {...a11yProps(1)} />
+          <Tab label="About" {...a11yProps(2)} />
+          <Tab label="Github" {...a11yProps(3)} />
         </Tabs>
         <TabPanel value={value} index={0}>
           <AutomationComponent/>
         </TabPanel>
+        <TabPanel value={value} index={1}>
+          <Veto/>
+        </TabPanel>
         {/* <TabPanel value={value} index={1}> */}
           {/* <NotificationComponent/> */}
         {/* </TabPanel> */}
-        <TabPanel value={value} index={1}>
+        <TabPanel value={value} index={2}>
           <AboutComponent/>
         </TabPanel>
-        <TabPanel value={value} index={2}>
+        <TabPanel value={value} index={3}>
           <GithubComponent/>
         </TabPanel>
       </Box>

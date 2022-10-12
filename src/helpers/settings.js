@@ -2,9 +2,17 @@ import OptionsSync from 'webext-options-sync'
 
 export const optionsStorage = new OptionsSync()
 
-export const isEnabledSetting = async key => {
+export const saveSetting = async (options) => {
+  await optionsStorage.set(options)
+}
+
+export const getSetting = async (key) => {
   const options = await optionsStorage.getAll()
-  return options[key] === "on"
+  return options[key]
+}
+
+export const isEnabledSetting = async key => {
+  return await getSetting(key) === "on"
 }
 
 export const toggleSetting = async key => {
@@ -34,6 +42,7 @@ export const InitSetting = () => {
     partyAutoAcceptInvite: false,
     matchRoomAutoVetoLocations: false,
     matchRoomAutoVetoMaps: false,
+    mapsVeto: [],
     modalCloseMatchVictory: false,
     modalCloseMatchDefeat: false,
     modalCloseGlobalRankingUpdate: false,
