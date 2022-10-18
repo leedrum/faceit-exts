@@ -17,6 +17,7 @@ import PlayerProfileMatchesDemo from './modules/add-player-profile-matches-demo'
 import { runIfEnableSetting } from '../../helpers/settings'
 import PlayerProfileExtendedStats from './modules/player-profile-extended-stats'
 import ClickMatchRoomConnectToServer from './modules/click-match-room-connect-to-server'
+import ClickMatchRoomCopyServerData from './modules/copy-match-room-copy-server-data'
 
 const debouncedPlayerProfileStatsFeatures = debounce(async parentElement => {
   // addPlayerProfileLevelProgress(parentElement)
@@ -115,6 +116,11 @@ function observeBody() {
         runIfEnableSetting(
           'matchRoomAutoConnectToServer',
           ClickMatchRoomConnectToServer
+        )
+
+        runIfEnableSetting(
+          'matchRoomAutoCopyServerData',
+          ClickMatchRoomCopyServerData
         )
       } else if (pages.isPlayerProfile()) {
         // addPlayerProfileBadge(mainContentElement)
