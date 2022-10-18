@@ -16,6 +16,7 @@ import PlayerProfileMatchesElo from './modules/player-profile-matches-elo'
 import PlayerProfileMatchesDemo from './modules/add-player-profile-matches-demo'
 import { runIfEnableSetting } from '../../helpers/settings'
 import PlayerProfileExtendedStats from './modules/player-profile-extended-stats'
+import ClickMatchRoomConnectToServer from './modules/click-match-room-connect-to-server'
 
 const debouncedPlayerProfileStatsFeatures = debounce(async parentElement => {
   // addPlayerProfileLevelProgress(parentElement)
@@ -110,6 +111,11 @@ function observeBody() {
       if (pages.isRoomOverview() && matchRoomIsReady()) {
 
         MatchRoomEloEstmation(mainContentElement)
+
+        runIfEnableSetting(
+          'matchRoomAutoConnectToServer',
+          ClickMatchRoomConnectToServer
+        )
       } else if (pages.isPlayerProfile()) {
         // addPlayerProfileBadge(mainContentElement)
         PlayerProfileBan(mainContentElement)
