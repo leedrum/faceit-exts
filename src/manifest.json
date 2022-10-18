@@ -9,7 +9,9 @@
     "storage"
   ],
   "action": {
-    "default_icon": "icon48.png",
+    "default_icon": {
+      "16": "icon16.png"
+    },
     "default_popup": "popup.html"
   },
   "icons": {
