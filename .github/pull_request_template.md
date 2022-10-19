@@ -1,11 +1,3 @@
----
-name: Pull request
-about: Create a pull request
-title: '[Feature] - Add an awesome feature'
-labels: feature
-assignees: ''
----
-
 **Describe the feature**
 Will do something
 
