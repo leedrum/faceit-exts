@@ -11,7 +11,7 @@ const DELAY = 5000
 const store = new Map()
 
 export const ClickMatchRoomCopyServerData = async () => {
-  const copyServerElement = document.getElementById("parasite-container").shadowRoot.querySelectorAll('button')[0]
+  const copyServerElement = document.getElementById("parasite-container").shadowRoot.querySelectorAll('button')[2]
 
   if (!copyServerElement) {
     return
