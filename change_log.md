@@ -1,5 +1,11 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.2](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.2)
+
+- Add feature auto copy server data
+- Add feature auto connect server
+- Add UI veto maps
+
 [v.1.1.1](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.1)
 
 - Add option Auto Accept Invite Party
