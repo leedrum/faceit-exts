@@ -20,6 +20,9 @@ I tried to fix it temporarily but so hard to push the extension files to everyon
 - Show Ban history
 - Auto accept invite
 - Auto Close modal when match end
+- Auto copy server data
+- Auto connect to server
+- Auto Veto maps (at this time have only UI)
 
 Please open up an issue to nudge me to update extension.
 
