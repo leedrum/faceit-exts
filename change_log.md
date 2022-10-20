@@ -1,5 +1,9 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.3](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.3)
+
+- Fix auto copy server data
+
 [v.1.1.2](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.2)
 
 - Add feature auto copy server data
