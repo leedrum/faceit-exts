@@ -2,7 +2,10 @@
 
 # Faceit Exts
 
-[![Build](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml/badge.svg)](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml) [![CS:GO](https://img.shields.io/badge/game-CS%3AGO-yellow.svg)](https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/) [![Javascript](https://img.shields.io/badge/language-Javascript-%23f34b7d.svg)]()
+[![Build](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml/badge.svg)](https://github.com/leedrum/faceit-exts/actions/workflows/webpack.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/c4298a31955a097e38f7/maintainability)](https://codeclimate.com/github/leedrum/faceit-exts/maintainability)
+[![CS:GO](https://img.shields.io/badge/game-CS%3AGO-yellow.svg)](https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/) [![Javascript](https://img.shields.io/badge/language-Javascript-%23f34b7d.svg)]()
+
 
 - [Chrome](https://chrome.google.com/webstore/detail/faceit-exts/blncihpjdpcjlkkfcmdkbdonkcpbenpp) <img valign="middle" src="https://img.shields.io/chrome-web-store/v/blncihpjdpcjlkkfcmdkbdonkcpbenpp?label=%20"> <img valign="middle" src="https://img.shields.io/chrome-web-store/users/blncihpjdpcjlkkfcmdkbdonkcpbenpp"> <img valign="middle" src="https://img.shields.io/chrome-web-store/rating/blncihpjdpcjlkkfcmdkbdonkcpbenpp">
 
