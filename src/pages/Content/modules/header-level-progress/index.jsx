@@ -1,6 +1,5 @@
 /** @jsx h */
 import { h } from 'dom-chef'
-import select from 'select-dom'
 import {
   hasFeatureAttribute,
   setFeatureAttribute
@@ -18,19 +17,19 @@ export const FeatureHeaderLevelProgress = async () => {
     return
   }
 
-  const headerRightElement = select('.main-header__right')
+  const mainHeaderActionsElement = document.querySelector('.fi-navbar__actions').querySelector('fi-navbar-actions').querySelector('parasite-main-header-actions').shadowRoot.querySelector('#__next').querySelector('div')
 
-  if (!headerRightElement) {
+  if (!mainHeaderActionsElement) {
     return
   }
 
-  headerRightElement.setAttribute('id', 'header-faceit-exts')
+  mainHeaderActionsElement.setAttribute('id', 'header-faceit-exts')
 
-  if (hasFeatureAttribute(FEATURE_ATTRIBUTE, headerRightElement)) {
+  if (hasFeatureAttribute(FEATURE_ATTRIBUTE, mainHeaderActionsElement)) {
     return
   }
-  setFeatureAttribute(FEATURE_ATTRIBUTE, headerRightElement)
-
+  setFeatureAttribute(FEATURE_ATTRIBUTE, mainHeaderActionsElement)
+  console.log('aaaaaaa')
   let levelElement
 
   const addLevelElement = async () => {
@@ -62,7 +61,8 @@ export const FeatureHeaderLevelProgress = async () => {
           display: 'flex',
           alignItems: 'center',
           marginRight: 8,
-          marginLeft: 24
+          marginLeft: 24,
+          fontSize: '10px'
         }}
       >
         <div style={{ marginRight: 4 }}>
@@ -75,7 +75,7 @@ export const FeatureHeaderLevelProgress = async () => {
           >
             <a
               className="text-sm text-muted bold"
-              style={{ alignSelf: 'flex-end' }}
+              style={{ alignSelf: 'flex-end', color: '#fff', textDecoration: 'none', opacity: 0.75 }}
               href="/#"
             >
               <div>{game.toUpperCase()}</div>
@@ -84,7 +84,9 @@ export const FeatureHeaderLevelProgress = async () => {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'flex-end'
+                justifyContent: 'flex-end',
+                fontSize: '13px',
+                opacity: 0.75
               }}
             >
               {faceitElo}
@@ -115,7 +117,8 @@ export const FeatureHeaderLevelProgress = async () => {
               className="text-sm text-muted bold"
               style={{
                 display: 'flex',
-                justifyContent: 'space-between'
+                justifyContent: 'space-between',
+                opacity: 0.75
               }}
             >
               {levelMinElo}
@@ -130,10 +133,10 @@ export const FeatureHeaderLevelProgress = async () => {
       </div>
     )
 
-    if (headerRightElement) {
-      headerRightElement.insertBefore(
+    if (mainHeaderActionsElement) {
+      mainHeaderActionsElement.insertBefore(
         levelElement,
-        headerRightElement.children[headerRightElement.children.length - 1]
+        mainHeaderActionsElement.children[mainHeaderActionsElement.children.length - 1]
       )
     }
   }
