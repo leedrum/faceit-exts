@@ -1,5 +1,9 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.4](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.4)
+
+- Fix displaying issue elo progress on the header
+
 [v.1.1.3](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.3)
 
 - Fix auto copy server data
