@@ -1,5 +1,9 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.5](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.5)
+
+- Fix issue display level progress on header
+
 [v.1.1.4](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.4)
 
 - Fix displaying issue elo progress on the header
