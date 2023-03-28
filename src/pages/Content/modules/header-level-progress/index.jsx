@@ -17,7 +17,7 @@ export const FeatureHeaderLevelProgress = async () => {
     return
   }
 
-  const mainHeaderActionsElement = document.querySelector('.fi-navbar__actions').querySelector('fi-navbar-actions').querySelector('parasite-main-header-actions').shadowRoot.querySelector('#__next').querySelector('div')
+  const mainHeaderActionsElement = document.querySelector('.main-header').querySelector('div').querySelector('parasite-main-header').shadowRoot.querySelector('#__next').querySelector('div')
 
   if (!mainHeaderActionsElement) {
     return
