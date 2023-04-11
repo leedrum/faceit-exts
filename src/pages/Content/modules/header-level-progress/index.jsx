@@ -29,7 +29,6 @@ export const FeatureHeaderLevelProgress = async () => {
     return
   }
   setFeatureAttribute(FEATURE_ATTRIBUTE, mainHeaderActionsElement)
-  console.log('aaaaaaa')
   let levelElement
 
   const addLevelElement = async () => {
