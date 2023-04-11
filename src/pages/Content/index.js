@@ -48,6 +48,16 @@ function observeBody() {
     }
 
     const modalElement = select('.modal-dialog')
+    const fuseModalPortal = select('.FuseModalPortal')
+
+    if (fuseModalPortal) {
+      const parent = fuseModalPortal.shadowRoot.querySelector('#__next')
+      runIfEnableSetting(
+        'matchQueueAutoReady',
+        ClickModalMatchReady,
+        parent
+      )
+    }
 
     if (modalElement) {
       if (modals.isMatchQueuing(modalElement)) {
