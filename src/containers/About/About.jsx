@@ -22,7 +22,7 @@ export const AboutComponent = () => {
       <Row>
         <Grid item xs={12}>
           <Typography component={'p'}>
-            Version: 1.1.6
+            Version: 1.1.7
           </Typography>
         </Grid>
       </Row>
