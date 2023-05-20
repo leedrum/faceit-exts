@@ -1,5 +1,9 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.7](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.7)
+
+- Fix auto accept for new UI
+
 [v.1.1.6](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.6)
 
 - Fix auto accept for new UI

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Faceit Exts",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Faceit Exts is a extension improve experience and adds some features",
   "background": { "service_worker": "background.bundle.js" },
   "host_permissions": ["https://api.faceit.com/"],
