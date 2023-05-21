@@ -17,7 +17,12 @@ export const FeatureHeaderLevelProgress = async () => {
     return
   }
 
-  const mainHeaderActionsElement = document.querySelector("div[ui-view='header']").querySelector('#main-header-height-wrapper').shadowRoot.querySelector("#__next").querySelector("#main-header-height-wrapper").querySelector('div')
+  let mainHeaderActionsElement = null
+  try {
+    mainHeaderActionsElement = document.querySelector("div[ui-view='header']").querySelector('#main-header-height-wrapper').shadowRoot.querySelector("#__next").querySelector("#main-header-height-wrapper").querySelector('div')
+  } catch (error) {
+    return
+  }
 
   if (!mainHeaderActionsElement) {
     return
