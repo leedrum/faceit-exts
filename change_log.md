@@ -1,5 +1,12 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.8](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.8)
+
+- remove lifetime stats
+- ignore the error when the header is not found
+- re-show the last 20 matches' stats, add current elo and win rate
+- remove unused section other stats ( already show it at BAN section in profile page )
+
 [v.1.1.7](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.7)
 
 - Fix auto accept for new UI
