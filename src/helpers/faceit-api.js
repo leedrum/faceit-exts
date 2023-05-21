@@ -2,7 +2,7 @@ import pMemoize from 'p-memoize'
 import camelcaseKeys from 'camelcase-keys'
 import * as dateFns from 'date-fns'
 import Cookies from 'js-cookie'
-import { mapTotalStatsMemoized, mapAverageStatsMemoized } from './stats'
+import { mapAverageStatsMemoized } from './stats'
 import pRetry from 'p-retry'
 
 export const CACHE_TIME = 600000
@@ -82,18 +82,8 @@ export const getPlayerStats = async (userId, game, size = 20) => {
     return false
   }
 
-  let totalStats = await fetchApiMemoized(
-    `/stats/v1/stats/users/${userId}/games/${game}`
-  )
-
-  if (!totalStats || Object.keys(totalStats).length === 0) {
-    return null
-  }
-
-  totalStats = mapTotalStatsMemoized(totalStats.lifetime)
-
   let averageStats = await fetchApiMemoized(
-    `/stats/v1/stats/time/users/${userId}/games/${game}?size=${size}`
+    `/stats/v1/stats/time/users/${userId}/games/${game}?page=0&size=${size}`
   )
 
   if (!averageStats || !Array.isArray(averageStats)) {
@@ -109,7 +99,6 @@ export const getPlayerStats = async (userId, game, size = 20) => {
   averageStats = mapAverageStatsMemoized(averageStats)
 
   return {
-    ...totalStats,
     ...averageStats
   }
 }

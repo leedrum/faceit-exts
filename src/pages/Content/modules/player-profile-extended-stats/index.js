@@ -41,9 +41,7 @@ export const PlayerProfileExtendedStats = async parentElement => {
 
   const nickname = getPlayerProfileNickname()
   const game = getPlayerProfileStatsGame()
-  const { infractions = {}, ...player } = await getPlayer(nickname)
-
-  const { afk = 0, leaver = 0 } = infractions
+  const { ...player } = await getPlayer(nickname)
 
   const playerStats = await getPlayerStats(player.id, game)
 
@@ -52,6 +50,7 @@ export const PlayerProfileExtendedStats = async parentElement => {
   }
 
   const {
+    winRate,
     averageKills,
     averageHeadshots,
     averageKDRatio,
@@ -63,7 +62,15 @@ export const PlayerProfileExtendedStats = async parentElement => {
       <div style={{ display: 'flex', gap: 16 }}>
         <div style={{ flex: 2 }}>
           {createSectionTitleElement({ title: 'Last 20 Matches Statistics' })}
-          <div style={{ display: 'flex', gap: 16 }}>
+          <div style={{ display: 'flex', gap: 14 }}>
+            {createKeyStatElement({
+              key: 'Elo',
+              stat: player.games.csgo.faceitElo
+            })}
+            {createKeyStatElement({
+              key: 'WIN RATE %',
+              stat: winRate
+            })}
             {createKeyStatElement({
               key: 'Average Kills',
               stat: averageKills
@@ -82,19 +89,6 @@ export const PlayerProfileExtendedStats = async parentElement => {
             })}
           </div>
           <div />
-        </div>
-        <div style={{ flex: 1 }}>
-          {createSectionTitleElement({ title: 'Other Statistics' })}
-          <div style={{ display: 'flex', gap: 16 }}>
-            {createKeyStatElement({
-              key: 'AFK Times',
-              stat: afk
-            })}
-            {createKeyStatElement({
-              key: 'Leave Times',
-              stat: leaver
-            })}
-          </div>
         </div>
       </div>
     </div>
