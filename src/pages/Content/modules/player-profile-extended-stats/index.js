@@ -52,6 +52,7 @@ export const PlayerProfileExtendedStats = async parentElement => {
   }
 
   const {
+    winRate,
     averageKills,
     averageHeadshots,
     averageKDRatio,
@@ -63,7 +64,15 @@ export const PlayerProfileExtendedStats = async parentElement => {
       <div style={{ display: 'flex', gap: 16 }}>
         <div style={{ flex: 2 }}>
           {createSectionTitleElement({ title: 'Last 20 Matches Statistics' })}
-          <div style={{ display: 'flex', gap: 16 }}>
+          <div style={{ display: 'flex', gap: 14 }}>
+            {createKeyStatElement({
+              key: 'Elo',
+              stat: player.games.csgo.faceitElo
+            })}
+            {createKeyStatElement({
+              key: 'WIN RATE %',
+              stat: winRate
+            })}
             {createKeyStatElement({
               key: 'Average Kills',
               stat: averageKills
