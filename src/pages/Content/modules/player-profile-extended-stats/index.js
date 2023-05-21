@@ -41,9 +41,7 @@ export const PlayerProfileExtendedStats = async parentElement => {
 
   const nickname = getPlayerProfileNickname()
   const game = getPlayerProfileStatsGame()
-  const { infractions = {}, ...player } = await getPlayer(nickname)
-
-  const { afk = 0, leaver = 0 } = infractions
+  const { ...player } = await getPlayer(nickname)
 
   const playerStats = await getPlayerStats(player.id, game)
 
@@ -91,19 +89,6 @@ export const PlayerProfileExtendedStats = async parentElement => {
             })}
           </div>
           <div />
-        </div>
-        <div style={{ flex: 1 }}>
-          {createSectionTitleElement({ title: 'Other Statistics' })}
-          <div style={{ display: 'flex', gap: 16 }}>
-            {createKeyStatElement({
-              key: 'AFK Times',
-              stat: afk
-            })}
-            {createKeyStatElement({
-              key: 'Leave Times',
-              stat: leaver
-            })}
-          </div>
         </div>
       </div>
     </div>
