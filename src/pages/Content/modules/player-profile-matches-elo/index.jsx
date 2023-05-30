@@ -25,8 +25,8 @@ export const PlayerProfileMatchesElo = async parentElement => {
   }
 
   const playerProfileElement = select(
-    '#__next > div',
-    playerProfileParasiteElement.shadowRoot
+    'div',
+    playerProfileParasiteElement
   )
 
   const matchElements = select.all('table > tbody > tr', playerProfileElement)
