@@ -19,7 +19,7 @@ export const FeatureHeaderLevelProgress = async () => {
 
   let mainHeaderActionsElement = null
   try {
-    mainHeaderActionsElement = document.querySelector("div[ui-view='header']").querySelector('#main-header-height-wrapper').shadowRoot.querySelector("#__next").querySelector("#main-header-height-wrapper").querySelector('div')
+    mainHeaderActionsElement = document.querySelector("div[ui-view='header']").querySelector('#main-header-height-wrapper').querySelector("#main-header-height-wrapper").querySelector('div')
   } catch (error) {
     return
   }
@@ -89,8 +89,7 @@ export const FeatureHeaderLevelProgress = async () => {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'flex-end',
-                fontSize: '13px',
-                opacity: 0.75
+                fontSize: '13px'
               }}
             >
               {faceitElo}
@@ -122,7 +121,6 @@ export const FeatureHeaderLevelProgress = async () => {
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
-                opacity: 0.75
               }}
             >
               {levelMinElo}
