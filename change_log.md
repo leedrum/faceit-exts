@@ -1,5 +1,18 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.9](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.9)
+
+- re-show header progress bar
+- re-show elo estimation
+- re-show history matches elo
+- re-show button watch demo
+- re-show last 20 matches stats
+
+- remove lifetime stats
+- ignore the error when the header is not found
+- re-show the last 20 matches' stats, add current elo and win rate
+- remove unused section other stats ( already show it at BAN section in profile page )
+
 [v.1.1.8](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.8)
 
 - remove lifetime stats
