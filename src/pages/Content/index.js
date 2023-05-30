@@ -119,7 +119,7 @@ function observeBody() {
     const mainContentElement = select('#main-content')
 
     if (mainContentElement) {
-      if (pages.isRoomOverview() && matchRoomIsReady()) {
+      if (pages.isRoomOverview() || matchRoomIsReady()) {
 
         MatchRoomEloEstmation(mainContentElement)
 

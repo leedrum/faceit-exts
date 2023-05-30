@@ -27,8 +27,8 @@ export const PlayerProfileExtendedStats = async parentElement => {
   }
 
   const playerProfileElement = select(
-    '#__next > div',
-    playerProfileParasiteElement.shadowRoot
+    'div',
+    playerProfileParasiteElement
   )
 
   if (
