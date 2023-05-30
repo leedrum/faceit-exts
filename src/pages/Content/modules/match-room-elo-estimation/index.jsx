@@ -68,7 +68,7 @@ export const MatchRoomEloEstmation =  async parent => {
     return
   }
 
-  parent = document.querySelector('#parasite-container').shadowRoot
+  parent = document.querySelector('#parasite-container')
   const factionNameElement1 = parent.querySelectorAll('h6')[1]
 
   const factionNameElement2 = parent.querySelectorAll('h6')[0]
