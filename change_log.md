@@ -1,5 +1,9 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.20](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.20)
+
+- Fix aute-accept, auto-connect
+
 [v.1.1.9](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.9)
 
 - re-show header progress bar
