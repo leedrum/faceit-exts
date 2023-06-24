@@ -22,7 +22,7 @@ export const ClickMatchRoomConnectToServer = async () => {
 
   const self = await getSelf()
   const roomId = getRoomId()
-  const isSelfInMatch = document.getElementById("parasite-container").shadowRoot.textContent.indexOf(self.nickname) > -1
+  const isSelfInMatch = document.getElementById("parasite-container").textContent.indexOf(self.nickname) > -1
 
   if (!isSelfInMatch) {
     return
