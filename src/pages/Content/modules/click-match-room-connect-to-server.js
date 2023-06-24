@@ -10,7 +10,7 @@ const FEATURE_ATTRIBUTE = 'connect-to-server'
 const DELAY = 5000
 
 export const ClickMatchRoomConnectToServer = async () => {
-  const goToServerElement = document.getElementById("parasite-container").shadowRoot.querySelectorAll('[rel="noopener noreferrer"]')[0]
+  const goToServerElement = document.getElementById("parasite-container").querySelectorAll('[rel="noopener noreferrer"]')[0]
 
   if (!goToServerElement) {
     return
