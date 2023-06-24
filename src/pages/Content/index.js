@@ -28,10 +28,10 @@ const debouncedPlayerProfileStatsFeatures = debounce(async parentElement => {
 
 function observeBody() {
   const observer = new MutationObserver(mutationList => {
-    const modalContainer = select('#parasite-modal-container').shadowRoot
+    const modalContainer = select('#parasite-modal-container')
     if (modalContainer) {
       const reactModals = modalContainer.querySelectorAll(
-        '.ReactModal__Content'
+        '.ReactModalPortal'
       )
 
       reactModals.forEach(modal => {
@@ -51,11 +51,10 @@ function observeBody() {
     const fuseModalPortal = select('.FuseModalPortal')
 
     if (fuseModalPortal) {
-      const parent = fuseModalPortal.shadowRoot.querySelector('#__next')
       runIfEnableSetting(
         'matchQueueAutoReady',
         ClickModalMatchReady,
-        parent
+        fuseModalPortal
       )
     }
 
