@@ -1,5 +1,11 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.21](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.21)
+
+- Now `ban history` will be at the bottom-left page (under `Team` section)
+- Re-show `level progress`
+- Fix `elo` range (changed by `Faceit`)
+
 [v.1.1.20](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.20)
 
 - Fix aute-accept, auto-connect
