@@ -10,16 +10,17 @@ import { LEVELS } from '../../../../helpers/elo'
 import SkillLevelComponent from "../../../../containers/skill-level";
 
 const FEATURE_ATTRIBUTE = 'level-progress'
-const REFRESH_TIME = 300
+const REFRESH_TIME = 120 // seconds
 
 export const FeatureHeaderLevelProgress = async () => {
+
   if (!isLoggedIn()) {
     return
   }
 
   let mainHeaderActionsElement = null
   try {
-    mainHeaderActionsElement = document.querySelector("div[ui-view='header']").querySelector('#main-header-height-wrapper').querySelector("#main-header-height-wrapper").querySelector('div')
+    mainHeaderActionsElement = document.querySelector("div[ui-view='header']").querySelector('#main-header-height-wrapper').querySelector('div')
   } catch (error) {
     return
   }

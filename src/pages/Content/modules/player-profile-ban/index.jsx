@@ -14,17 +14,21 @@ import { getPlayer, getPlayerBans } from '../../../../helpers/faceit-api'
 const FEATURE_ATTRIBUTE = 'profile-bans'
 
 export const PlayerProfileBan = async parentElement => {
-  const banElement = select('profile-overview-bans', parentElement)
+  // const banElement = select('profile-overview-bans', parentElement)
+  let aboutElement = parentElement.querySelector('#parasite-container').querySelector('#content-grid-element-5')
 
-  if (banElement === null || banElement === undefined) {
+  if (aboutElement === null || aboutElement === undefined) {
     return
   }
 
-  if (hasFeatureAttribute(FEATURE_ATTRIBUTE, banElement)) {
+  if (hasFeatureAttribute(FEATURE_ATTRIBUTE, aboutElement)) {
     return
   }
-
-  setFeatureAttribute(FEATURE_ATTRIBUTE, banElement)
+  const divClass = aboutElement.className
+  const headingClass = aboutElement.querySelector('h5').className
+  const spanClass = aboutElement.lastElementChild.className
+  setFeatureAttribute(FEATURE_ATTRIBUTE, aboutElement)
+  aboutElement = aboutElement.parentElement
 
   const headerElement = (
     <h3 className="heading-border">
@@ -32,7 +36,14 @@ export const PlayerProfileBan = async parentElement => {
     </h3>
   )
 
-  const noBanElement = <div>No match bans yet</div>
+  const noBanElement = (
+    <div className={divClass}>
+      <h5 className={headingClass}>
+        <span translate="BANS">Bans</span>
+      </h5>
+      <span translate="No match bans yet" className={spanClass}>No match bans yet</span>
+    </div>
+  )
 
   const nickname = getPlayerProfileNickname()
   const { id } = await getPlayer(nickname)
@@ -40,20 +51,20 @@ export const PlayerProfileBan = async parentElement => {
   const playerBans = await getPlayerBans(id)
 
   if (playerBans.length === 0) {
-    banElement.append(noBanElement)
+    aboutElement.append(noBanElement)
   }
 
   playerBans.forEach(ban => {
     const playerBansElement = createPlayerBansElement(ban)
 
-    const banWrapper = <div className="mb-sm">{playerBansElement}</div>
+    const banWrapper = <div className={divClass}>{playerBansElement}</div>
 
-    banElement.append(banWrapper)
+    aboutElement.append(banWrapper)
   })
 
   const headerElementMissing = select('h3.heading-border', parentElement)
   if (headerElementMissing === undefined) {
-    banElement.insertBefore(headerElement, banElement.firstChild)
+    aboutElement.insertBefore(headerElement, aboutElement.firstChild)
   }
 }
 
