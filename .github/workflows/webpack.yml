@@ -24,6 +24,7 @@ jobs:
 
     - name: Build
       run: |
-        npm install
+        npm install --global yarn
+        yarn install
         npx browserslist@latest --update-db
         NODE_ENV=production BABEL_ENV=production ASSET_PATH='/' npx webpack
