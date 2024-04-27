@@ -20,7 +20,7 @@ export const FeatureHeaderLevelProgress = async () => {
 
   let mainHeaderActionsElement = null
   try {
-    mainHeaderActionsElement = document.querySelector("div[ui-view='header']").querySelector('#main-header-height-wrapper').querySelector('div')
+    mainHeaderActionsElement = document.querySelectorAll('[data-testid="mh-friends-icon-button"]')[0].parentElement;
   } catch (error) {
     return
   }

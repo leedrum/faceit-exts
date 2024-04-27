@@ -22,7 +22,7 @@ const FEATURE_ATTRIBUTE = 'matches-demo'
 
 export const PlayerProfileMatchesDemo = async parentElement => {
   const playerProfileParasiteElement = select(
-    'parasite-player-profile-content',
+    '#parasite-container',
     parentElement
   )
 
@@ -30,10 +30,10 @@ export const PlayerProfileMatchesDemo = async parentElement => {
     return
   }
 
-  const playerProfileElement = select(
-    'div',
+  const playerProfileElement = select.all(
+    '#content-grid-element-0',
     playerProfileParasiteElement
-  )
+  )[0]
 
   const matchElements = select.all('table > tbody > tr', playerProfileElement)
 
