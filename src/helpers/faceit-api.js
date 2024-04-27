@@ -8,7 +8,7 @@ import pRetry from 'p-retry'
 export const CACHE_TIME = 600000
 
 
-const BASE_URL = 'https://api.faceit.com'
+const BASE_URL = 'https://www.faceit.com/api'
 
 export const faceitApii = async (path, options) => {
   const response = await pRetry(
@@ -38,12 +38,12 @@ async function fetchApi(path) {
   }
 
   try {
-    const token = Cookies.get('t') || localStorage.getItem('token')
+    // const token = Cookies.get('t') || localStorage.getItem('token')
     const options = { headers: {} }
 
-    if (token) {
-      options.headers.Authorization = `Bearer ${token}`
-    }
+    // if (token) {
+    //   options.headers.Authorization = `Bearer ${token}`
+    // }
 
     const response = await faceitApii(path, options)
     if (!response) return null
