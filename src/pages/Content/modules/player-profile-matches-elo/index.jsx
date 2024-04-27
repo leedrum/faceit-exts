@@ -16,7 +16,7 @@ const FEATURE_ATTRIBUTE = 'matches-elo'
 
 export const PlayerProfileMatchesElo = async parentElement => {
   const playerProfileParasiteElement = select(
-    'parasite-player-profile-content',
+    '#parasite-container',
     parentElement
   )
 
@@ -24,10 +24,10 @@ export const PlayerProfileMatchesElo = async parentElement => {
     return
   }
 
-  const playerProfileElement = select(
-    'div',
+  const playerProfileElement = select.all(
+    '#content-grid-element-0',
     playerProfileParasiteElement
-  )
+  )[0]
 
   const matchElements = select.all('table > tbody > tr', playerProfileElement)
 
@@ -66,25 +66,25 @@ export const PlayerProfileMatchesElo = async parentElement => {
     if (
       !match ||
       match.i18 !== scoreElement.textContent.trim() ||
-      match.i1 !== mapElement.textContent.trim()
+      !match.i1.includes(mapElement.textContent.trim().toLowerCase())
     ) {
       return
     }
 
     const eloChange = eloChangesByMatches[match.matchId]
-
+    console.log('eloChange', eloChange)
     if (!eloChange) {
       return
     }
 
     const { eloDiff, newElo } = eloChange
-
+    console.log('eloDiff', eloDiff)
     if (!eloDiff) {
       return
     }
 
     const resultElement = select('td:nth-child(3) span', matchElement)
-
+    console.log('resultElement', resultElement)
     resultElement.textContent += ` (${eloDiff >= 0 ? '+' : ''}${eloDiff})`
 
     const newEloElement = (
