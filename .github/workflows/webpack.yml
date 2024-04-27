@@ -26,5 +26,6 @@ jobs:
       run: |
         npm install --global yarn
         yarn install
+        npm install caniuse-lite --force
         npx browserslist@latest --update-db
         NODE_ENV=production BABEL_ENV=production ASSET_PATH='/' npx webpack
