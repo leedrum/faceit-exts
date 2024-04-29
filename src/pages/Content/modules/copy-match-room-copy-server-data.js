@@ -7,17 +7,22 @@ import { getSelf } from '../../../helpers/faceit-api'
 import { getSetting } from '../../../helpers/settings'
 
 const FEATURE_ATTRIBUTE = 'connect-to-server'
-const DELAY = 5000
+const DELAY = 2000
 const store = new Map()
 
 export const ClickMatchRoomCopyServerData = async () => {
-  const copyServerElement = document.getElementById("parasite-container").shadowRoot.querySelectorAll('button')[2]
+  const parasiteElement = document.getElementById("parasite-container")
+  if (!parasiteElement) {
+    return
+  }
+
+  const copyServerElement = parasiteElement.shadowRoot.querySelectorAll('button')[2]
 
   if (!copyServerElement) {
     return
   }
 
-  if (copyServerElement.textContent !== "Copy") {
+  if (copyServerElement.textContent.toLowerCase() !== "copy") {
     return
   }
 
