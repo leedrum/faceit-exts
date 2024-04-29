@@ -72,19 +72,18 @@ export const PlayerProfileMatchesElo = async parentElement => {
     }
 
     const eloChange = eloChangesByMatches[match.matchId]
-    console.log('eloChange', eloChange)
+
     if (!eloChange) {
       return
     }
 
     const { eloDiff, newElo } = eloChange
-    console.log('eloDiff', eloDiff)
+
     if (!eloDiff) {
       return
     }
 
     const resultElement = select('td:nth-child(3) span', matchElement)
-    console.log('resultElement', resultElement)
     resultElement.textContent += ` (${eloDiff >= 0 ? '+' : ''}${eloDiff})`
 
     const newEloElement = (
