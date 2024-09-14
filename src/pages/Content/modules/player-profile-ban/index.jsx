@@ -15,25 +15,38 @@ const FEATURE_ATTRIBUTE = 'profile-bans'
 
 export const PlayerProfileBan = async parentElement => {
   // const banElement = select('profile-overview-bans', parentElement)
-  let aboutElement = parentElement.querySelector('#parasite-container').querySelector('#content-grid-element-5')
-
-  if (aboutElement === null || aboutElement === undefined) {
+  let parasiteContainer = parentElement.querySelector('#parasite-container')
+  let listContentGrid = null
+  if (parasiteContainer) {
+    listContentGrid = parasiteContainer
+  } else {
+    listContentGrid = parentElement
+  }
+  listContentGrid = listContentGrid.querySelector('#content-grid-element-8')
+  if (listContentGrid === null || listContentGrid === undefined) {
     return
   }
 
-  if (hasFeatureAttribute(FEATURE_ATTRIBUTE, aboutElement)) {
+  if (hasFeatureAttribute(FEATURE_ATTRIBUTE, listContentGrid)) {
     return
   }
-  const divClass = aboutElement.className
-  const headingClass = aboutElement.querySelector('h5').className
-  const spanClass = aboutElement.lastElementChild.className
-  setFeatureAttribute(FEATURE_ATTRIBUTE, aboutElement)
-  aboutElement = aboutElement.parentElement
+
+  const divClass = listContentGrid.className
+  const headingClass = listContentGrid.querySelector('h5').className
+  const spanClass = listContentGrid.lastElementChild.className
+  setFeatureAttribute(FEATURE_ATTRIBUTE, listContentGrid)
+  listContentGrid = listContentGrid.parentElement
+
+  const anchorElement = (
+    <div></div>
+  )
 
   const headerElement = (
-    <h3 className="heading-border">
-      <span translate="BANS">Bans</span>
-    </h3>
+    <div className={divClass}>
+      <h3 className="heading-border">
+        <span translate="BANS">Bans</span>
+      </h3>
+    </div>
   )
 
   const noBanElement = (
@@ -51,21 +64,21 @@ export const PlayerProfileBan = async parentElement => {
   const playerBans = await getPlayerBans(id)
 
   if (playerBans.length === 0) {
-    aboutElement.append(noBanElement)
+    listContentGrid.append(noBanElement)
+  }
+
+  const headerElementMissing = select('h3.heading-border', parentElement)
+  if (headerElementMissing === undefined) {
+    listContentGrid.append(headerElement)
   }
 
   playerBans.forEach(ban => {
     const playerBansElement = createPlayerBansElement(ban)
 
-    const banWrapper = <div className={divClass}>{playerBansElement}</div>
+    const banWrapper = <div className={divClass} style={{color: 'red'}}>{playerBansElement}</div>
 
-    aboutElement.append(banWrapper)
+    listContentGrid.append(banWrapper)
   })
-
-  const headerElementMissing = select('h3.heading-border', parentElement)
-  if (headerElementMissing === undefined) {
-    aboutElement.insertBefore(headerElement, aboutElement.firstChild)
-  }
 }
 
 export default PlayerProfileBan
