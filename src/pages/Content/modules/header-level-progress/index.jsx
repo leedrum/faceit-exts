@@ -20,7 +20,7 @@ export const FeatureHeaderLevelProgress = async () => {
 
   let mainHeaderActionsElement = null
   try {
-    mainHeaderActionsElement = document.querySelectorAll('[data-testid="mh-friends-icon-button"]')[0].parentElement;
+    mainHeaderActionsElement = document.querySelectorAll('[data-testid="fi-search-input"]')[0].parentElement.lastChild.firstChild.firstChild;
   } catch (error) {
     return
   }
@@ -139,7 +139,7 @@ export const FeatureHeaderLevelProgress = async () => {
     if (mainHeaderActionsElement) {
       mainHeaderActionsElement.insertBefore(
         levelElement,
-        mainHeaderActionsElement.children[mainHeaderActionsElement.children.length - 1]
+        mainHeaderActionsElement.children[0]
       )
     }
   }
