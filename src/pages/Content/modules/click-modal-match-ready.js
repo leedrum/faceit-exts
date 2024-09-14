@@ -19,7 +19,7 @@ export const ClickModalMatchReady = parent => {
 
   const buttons = parent.querySelectorAll('button')
   buttons.forEach((button, _index) => {
-    if (button.textContent == 'Accept') {
+    if (button.textContent == 'Accept' || button.textContent == 'Chấp nhận') {
       button.click()
     }
   })
