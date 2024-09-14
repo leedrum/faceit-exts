@@ -115,7 +115,7 @@ function observeBody() {
 
     FeatureHeaderLevelProgress()
 
-    const mainContentElement = select('#main-content')
+    const mainContentElement = select('#main-layout-content')
 
     if (mainContentElement) {
       if (pages.isRoomOverview() || matchRoomIsReady()) {
