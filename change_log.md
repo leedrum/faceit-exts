@@ -1,5 +1,10 @@
 # Faceit Exts - CHANGE LOG
 
+[v.1.1.24](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.21)
+
+- Redisplay Now `ban history` will be at the bottom-left page (under `Team` section)
+- Re-localted `level progress`
+
 [v.1.1.21](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.21)
 
 - Now `ban history` will be at the bottom-left page (under `Team` section)
