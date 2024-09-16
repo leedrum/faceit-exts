@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Faceit Exts",
-  "version": "1.1.24",
+  "version": "1.2.0",
   "description": "Faceit Exts is a extension improve experience and adds some features",
   "background": { "service_worker": "background.bundle.js" },
   "host_permissions": ["https://api.faceit.com/"],
@@ -21,7 +21,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://www.faceit.com/*"],
+      "matches": ["https://www.faceit.com/*", "https://www.gonxt.com/*"],
       "js": ["contentScript.bundle.js"],
       "css": ["content.styles.css"]
     }

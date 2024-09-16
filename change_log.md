@@ -1,6 +1,11 @@
 # Faceit Exts - CHANGE LOG
 
-[v.1.1.24](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.21)
+[v.1.2.0]()
+### Now Support for [GoNxt]([GoNxt](https://www.gonxt.com/))
+- Added auto accept Team invite for [GoNxt](https://www.gonxt.com/)
+- Added auto accept match ready for [GoNxt](https://www.gonxt.com/)
+
+[v.1.1.24](https://github.com/leedrum/faceit-exts/releases/tag/v1.1.24)
 
 - Redisplay Now `ban history` will be at the bottom-left page (under `Team` section)
 - Re-localted `level progress`
