@@ -19,6 +19,9 @@ import PlayerProfileExtendedStats from './modules/player-profile-extended-stats'
 import ClickMatchRoomConnectToServer from './modules/click-match-room-connect-to-server'
 import ClickMatchRoomCopyServerData from './modules/copy-match-room-copy-server-data'
 
+// gonxt import
+import GonxtClickModalPartyInviteAccept from './gonxt/auto-accept-invite'
+
 const debouncedPlayerProfileStatsFeatures = debounce(async parentElement => {
   // addPlayerProfileLevelProgress(parentElement)
   await PlayerProfileMatchesDemo(parentElement)
@@ -28,6 +31,22 @@ const debouncedPlayerProfileStatsFeatures = debounce(async parentElement => {
 
 function observeBody() {
   const observer = new MutationObserver(mutationList => {
+    // support gonxt
+    if (location.href.includes("gonxt")) {
+      const layoutContainer = select('#layout-container')
+      const notiWrap = select('.ant-notification-topRight')
+      if (layoutContainer && notiWrap) {
+        if (modals.isGoNxtInviteToParty(notiWrap)) {
+          runIfEnableSetting(
+            'partyAutoAcceptInvite',
+            GonxtClickModalPartyInviteAccept,
+            notiWrap
+          )
+        }
+      }
+    }
+
+    // support faceit
     const modalContainer = select('#parasite-modal-container')
     if (modalContainer) {
       const reactModals = modalContainer.querySelectorAll(
