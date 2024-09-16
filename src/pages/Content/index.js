@@ -21,6 +21,7 @@ import ClickMatchRoomCopyServerData from './modules/copy-match-room-copy-server-
 
 // gonxt import
 import GonxtClickModalPartyInviteAccept from './gonxt/auto-accept-invite'
+import GonxtClickModalMatchReady from './gonxt/auto-match-ready'
 
 const debouncedPlayerProfileStatsFeatures = debounce(async parentElement => {
   // addPlayerProfileLevelProgress(parentElement)
@@ -40,6 +41,14 @@ function observeBody() {
           runIfEnableSetting(
             'partyAutoAcceptInvite',
             GonxtClickModalPartyInviteAccept,
+            notiWrap
+          )
+        }
+
+        if (modals.isGoNxtMatchReady(notiWrap)) {
+          runIfEnableSetting(
+            'matchQueueAutoReady',
+            GonxtClickModalMatchReady,
             notiWrap
           )
         }

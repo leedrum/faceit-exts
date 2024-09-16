@@ -8,6 +8,9 @@ export const isInviteToParty = parent =>
 export const isGoNxtInviteToParty = parent =>
   parent.querySelector('p').textContent == 'Mời vào trận' || parent.querySelector('p').textContent == 'Team invite'
 
+export const isGoNxtMatchReady = parent =>
+  parent.querySelector('[class^="match_ready_content"]')[0]
+
 export const isMatchQueuing = parent =>
   select.exists('h3[translate-once="QUICK-MATCH-QUEUING"]', parent)
 
